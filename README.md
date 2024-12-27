@@ -15,4 +15,4 @@ python main.py --model_name GTE --emb_size 64 --lr 1e-3 --l2 1e-6 --dataset Groc
 python main.py --model_name GTE --emb_size 64 --lr 1e-3 --l2 1e-6 --dataset MIND_Large
 ```
 ## 实验
-我们小组基于Rechorus2.0框架复现了GTE算法，并使用ReChorus框架里的两个个数据集Grocery_and_Gourmet_Food、MIND_Large来与原ReChorus中同类别的两个其他模型：BUIR和NeuMF进行对比。
+我们小组基于Rechorus2.0框架复现了GTE算法，并使用ReChorus框架里的两个数据集Grocery_and_Gourmet_Food、MIND_Large来与原ReChorus中同类别的两个其他模型：BUIR和NeuMF进行对比。
