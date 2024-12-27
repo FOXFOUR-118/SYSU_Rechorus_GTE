@@ -1,0 +1,147 @@
+INFO:root:Namespace(model_name='GTE', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-27 12:06:51 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments          | Values     
+=================================
+ batch_size         | 256       
+ data_appendix      |           
+ dataset            | MIND_Large
+ dropout            | 0         
+ early_stop         | 10        
+ epoch              | 200       
+ eval_batch_size    | 256       
+ gpu                | 0         
+ l2                 | 1e-06     
+ lr                 | 0.001     
+ main_metric        |           
+ num_neg            | 1         
+ num_workers        | 5         
+ optimizer          | Adam      
+ random_seed        | 0         
+ save_final_results | 1         
+ test_all           | 0         
+ topk               | 5,10,20,50
+=================================
+INFO:root:Device: cpu
+INFO:root:Reading data from "C:\Users\FOXFOUR\Desktop\GTE_BUIR_NeuMF\data", dataset = "MIND_Large" 
+INFO:root:Namespace(model_name='GTE', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-27 13:04:16 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments          | Values     
+=================================
+ batch_size         | 256       
+ data_appendix      |           
+ dataset            | MIND_Large
+ dropout            | 0         
+ early_stop         | 10        
+ epoch              | 200       
+ eval_batch_size    | 256       
+ gpu                | 0         
+ l2                 | 1e-06     
+ lr                 | 0.001     
+ main_metric        |           
+ num_neg            | 1         
+ num_workers        | 5         
+ optimizer          | Adam      
+ random_seed        | 0         
+ save_final_results | 1         
+ test_all           | 0         
+ topk               | 5,10,20,50
+=================================
+INFO:root:Device: cpu
+INFO:root:Reading data from "C:\Users\FOXFOUR\Desktop\GTE_BUIR_NeuMF\data", dataset = "MIND_Large" 
+INFO:root:Namespace(model_name='GTE', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-27 13:19:21 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments          | Values     
+=================================
+ batch_size         | 256       
+ data_appendix      |           
+ dataset            | MIND_Large
+ dropout            | 0         
+ early_stop         | 10        
+ epoch              | 200       
+ eval_batch_size    | 256       
+ gpu                | 0         
+ l2                 | 1e-06     
+ lr                 | 0.001     
+ main_metric        |           
+ num_neg            | 1         
+ num_workers        | 5         
+ optimizer          | Adam      
+ random_seed        | 0         
+ save_final_results | 1         
+ test_all           | 0         
+ topk               | 5,10,20,50
+=================================
+INFO:root:Device: cpu
+INFO:root:Reading data from "C:\Users\FOXFOUR\Desktop\GTE_BUIR_NeuMF\data", dataset = "MIND_Large" 
+INFO:root:Counting dataset statistics...
+INFO:root:"# user": 16526, "# item": 2817, "# entry": 163861
+INFO:root:Save corpus to C:\Users\FOXFOUR\Desktop\GTE_BUIR_NeuMF\data\MIND_Large\BaseReader.pkl
+INFO:root:#params: 54514210
+INFO:root:GTE(
+  (item_rep): Embedding(2818, 2818)
+  (user_rep): Embedding(16527, 2818)
+)
+INFO:root:Test Before Training: (HR@5:0.0490,NDCG@5:0.0296,HR@10:0.0931,NDCG@10:0.0434,HR@20:0.2039,NDCG@20:0.0710,HR@50:0.5108,NDCG@50:0.1309)
+INFO:root:Optimizer: Adam
+INFO:root:Epoch 1     loss=0.5422 [154.7 s]	dev=(HR@5:0.0482,NDCG@5:0.0273) [8.3 s] *
+INFO:root:Epoch 2     loss=0.2591 [154.1 s]	dev=(HR@5:0.0574,NDCG@5:0.0325) [8.0 s] *
+INFO:root:Epoch 3     loss=0.1238 [154.2 s]	dev=(HR@5:0.0592,NDCG@5:0.0339) [8.0 s] *
+INFO:root:Epoch 4     loss=0.0668 [154.2 s]	dev=(HR@5:0.0589,NDCG@5:0.0351) [8.0 s] *
+INFO:root:Epoch 5     loss=0.0434 [153.4 s]	dev=(HR@5:0.0623,NDCG@5:0.0360) [7.9 s] *
+INFO:root:Epoch 6     loss=0.0333 [154.0 s]	dev=(HR@5:0.0583,NDCG@5:0.0346) [7.9 s]
+INFO:root:Epoch 7     loss=0.0285 [154.1 s]	dev=(HR@5:0.0601,NDCG@5:0.0356) [7.9 s]
+INFO:root:Epoch 8     loss=0.0254 [153.6 s]	dev=(HR@5:0.0641,NDCG@5:0.0385) [7.9 s] *
+INFO:root:Epoch 9     loss=0.0236 [153.8 s]	dev=(HR@5:0.0647,NDCG@5:0.0387) [7.9 s] *
+INFO:root:Epoch 10    loss=0.0228 [153.7 s]	dev=(HR@5:0.0687,NDCG@5:0.0405) [7.9 s] *
+INFO:root:Epoch 11    loss=0.0212 [153.2 s]	dev=(HR@5:0.0669,NDCG@5:0.0394) [7.9 s]
+INFO:root:Epoch 12    loss=0.0209 [154.0 s]	dev=(HR@5:0.0669,NDCG@5:0.0393) [7.9 s]
+INFO:root:Epoch 13    loss=0.0204 [153.8 s]	dev=(HR@5:0.0663,NDCG@5:0.0397) [7.9 s]
+INFO:root:Epoch 14    loss=0.0200 [153.8 s]	dev=(HR@5:0.0702,NDCG@5:0.0408) [7.9 s] *
+INFO:root:Epoch 15    loss=0.0195 [153.7 s]	dev=(HR@5:0.0696,NDCG@5:0.0405) [7.9 s]
+INFO:root:Epoch 16    loss=0.0192 [153.6 s]	dev=(HR@5:0.0681,NDCG@5:0.0412) [7.9 s] *
+INFO:root:Epoch 17    loss=0.0190 [153.6 s]	dev=(HR@5:0.0718,NDCG@5:0.0432) [8.0 s] *
+INFO:root:Epoch 18    loss=0.0186 [156.1 s]	dev=(HR@5:0.0586,NDCG@5:0.0361) [8.0 s]
+INFO:root:Epoch 19    loss=0.0186 [153.8 s]	dev=(HR@5:0.0666,NDCG@5:0.0397) [7.9 s]
+INFO:root:Epoch 20    loss=0.0182 [155.1 s]	dev=(HR@5:0.0687,NDCG@5:0.0417) [8.1 s]
+INFO:root:Epoch 21    loss=0.0185 [153.9 s]	dev=(HR@5:0.0666,NDCG@5:0.0400) [8.0 s]
+INFO:root:Epoch 22    loss=0.0183 [153.7 s]	dev=(HR@5:0.0638,NDCG@5:0.0394) [7.9 s]
+INFO:root:Epoch 23    loss=0.0183 [154.0 s]	dev=(HR@5:0.0709,NDCG@5:0.0425) [8.0 s]
+INFO:root:Epoch 24    loss=0.0182 [153.3 s]	dev=(HR@5:0.0693,NDCG@5:0.0433) [7.9 s] *
+INFO:root:Epoch 25    loss=0.0183 [153.9 s]	dev=(HR@5:0.0702,NDCG@5:0.0419) [8.1 s]
+INFO:root:Epoch 26    loss=0.0180 [153.3 s]	dev=(HR@5:0.0660,NDCG@5:0.0410) [7.9 s]
+INFO:root:Epoch 27    loss=0.0179 [153.9 s]	dev=(HR@5:0.0712,NDCG@5:0.0436) [7.9 s] *
+INFO:root:Epoch 28    loss=0.0182 [153.6 s]	dev=(HR@5:0.0678,NDCG@5:0.0413) [8.0 s]
+INFO:root:Epoch 29    loss=0.0180 [153.6 s]	dev=(HR@5:0.0696,NDCG@5:0.0431) [8.0 s]
+INFO:root:Epoch 30    loss=0.0177 [153.3 s]	dev=(HR@5:0.0699,NDCG@5:0.0440) [8.0 s] *
+INFO:root:Epoch 31    loss=0.0179 [153.1 s]	dev=(HR@5:0.0653,NDCG@5:0.0405) [8.0 s]
+INFO:root:Epoch 32    loss=0.0180 [153.5 s]	dev=(HR@5:0.0638,NDCG@5:0.0385) [8.0 s]
+INFO:root:Epoch 33    loss=0.0177 [153.2 s]	dev=(HR@5:0.0727,NDCG@5:0.0443) [7.9 s] *
+INFO:root:Epoch 34    loss=0.0181 [153.3 s]	dev=(HR@5:0.0641,NDCG@5:0.0393) [8.0 s]
+INFO:root:Epoch 35    loss=0.0178 [153.6 s]	dev=(HR@5:0.0647,NDCG@5:0.0397) [7.9 s]
+INFO:root:Epoch 36    loss=0.0177 [153.8 s]	dev=(HR@5:0.0672,NDCG@5:0.0412) [8.0 s]
+INFO:root:Epoch 37    loss=0.0178 [153.6 s]	dev=(HR@5:0.0666,NDCG@5:0.0406) [7.9 s]
+INFO:root:Epoch 38    loss=0.0178 [153.9 s]	dev=(HR@5:0.0684,NDCG@5:0.0409) [8.0 s]
+INFO:root:Epoch 39    loss=0.0176 [154.2 s]	dev=(HR@5:0.0675,NDCG@5:0.0406) [7.9 s]
+INFO:root:Epoch 40    loss=0.0177 [154.1 s]	dev=(HR@5:0.0650,NDCG@5:0.0386) [8.0 s]
+INFO:root:Epoch 41    loss=0.0178 [154.1 s]	dev=(HR@5:0.0663,NDCG@5:0.0396) [7.9 s]
+INFO:root:Epoch 42    loss=0.0177 [154.1 s]	dev=(HR@5:0.0580,NDCG@5:0.0351) [7.9 s]
+INFO:root:Early stop at 42 based on dev result.
+INFO:root:
+Best Iter(dev)=   33	 dev=(HR@5:0.0727,NDCG@5:0.0443) [6803.0 s] 
+INFO:root:Load model from ../model/GTE/GTE__MIND_Large__0__lr=0.001__l2=1e-06.pt
+INFO:root:
+Dev  After Training: (HR@5:0.0727,NDCG@5:0.0443,HR@10:0.1420,NDCG@10:0.0664,HR@20:0.2644,NDCG@20:0.0971,HR@50:0.5613,NDCG@50:0.1553)
+INFO:root:
+Test After Training: (HR@5:0.1029,NDCG@5:0.0671,HR@10:0.1951,NDCG@10:0.0964,HR@20:0.3049,NDCG@20:0.1242,HR@50:0.6020,NDCG@50:0.1822)
+INFO:root:Saving top-100 recommendation results to: ../log/GTE\GTE__MIND_Large__0__lr=0\rec-GTE-dev.csv
+INFO:root:dev Prediction results saved!
+INFO:root:Saving top-100 recommendation results to: ../log/GTE\GTE__MIND_Large__0__lr=0\rec-GTE-test.csv
+INFO:root:test Prediction results saved!
+INFO:root:
+--------------------------------------------- END: 2024-12-27 15:13:25 ---------------------------------------------

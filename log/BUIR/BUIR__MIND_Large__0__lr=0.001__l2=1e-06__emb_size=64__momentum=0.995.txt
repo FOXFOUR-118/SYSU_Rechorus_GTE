@@ -1,0 +1,82 @@
+INFO:root:Namespace(model_name='BUIR', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-27 18:48:14 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments          | Values     
+=================================
+ batch_size         | 256       
+ data_appendix      |           
+ dataset            | MIND_Large
+ dropout            | 0         
+ early_stop         | 10        
+ emb_size           | 64        
+ epoch              | 200       
+ eval_batch_size    | 256       
+ gpu                | 0         
+ l2                 | 1e-06     
+ lr                 | 0.001     
+ main_metric        |           
+ momentum           | 0.995     
+ num_neg            | 1         
+ num_workers        | 5         
+ optimizer          | Adam      
+ random_seed        | 0         
+ save_final_results | 1         
+ test_all           | 0         
+ topk               | 5,10,20,50
+=================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from C:\Users\FOXFOUR\Desktop\GTE_BUIR_NeuMF\data\MIND_Large\BaseReader.pkl
+INFO:root:#params: 1242240
+INFO:root:BUIR(
+  (user_online): Embedding(16527, 64)
+  (user_target): Embedding(16527, 64)
+  (item_online): Embedding(2818, 64)
+  (item_target): Embedding(2818, 64)
+  (predictor): Linear(in_features=64, out_features=64, bias=True)
+  (bn): BatchNorm1d(64, eps=0, momentum=0.1, affine=False, track_running_stats=False)
+)
+INFO:root:Test Before Training: (HR@5:0.0667,NDCG@5:0.0438,HR@10:0.0971,NDCG@10:0.0536,HR@20:0.1735,NDCG@20:0.0725,HR@50:0.5294,NDCG@50:0.1416)
+INFO:root:Optimizer: Adam
+INFO:root:Epoch 1     loss=3.4293 [15.8 s]	dev=(HR@5:0.0242,NDCG@5:0.0135) [8.1 s] *
+INFO:root:Epoch 2     loss=0.4075 [15.3 s]	dev=(HR@5:0.0334,NDCG@5:0.0185) [8.1 s] *
+INFO:root:Epoch 3     loss=0.1996 [15.4 s]	dev=(HR@5:0.0534,NDCG@5:0.0261) [7.9 s] *
+INFO:root:Epoch 4     loss=0.2390 [15.3 s]	dev=(HR@5:0.0221,NDCG@5:0.0121) [8.0 s]
+INFO:root:Epoch 5     loss=0.3698 [15.3 s]	dev=(HR@5:0.0340,NDCG@5:0.0186) [8.0 s]
+INFO:root:Epoch 6     loss=0.6319 [15.3 s]	dev=(HR@5:0.0423,NDCG@5:0.0239) [8.0 s]
+INFO:root:Epoch 7     loss=0.8962 [15.4 s]	dev=(HR@5:0.0546,NDCG@5:0.0317) [8.0 s] *
+INFO:root:Epoch 8     loss=1.0575 [15.3 s]	dev=(HR@5:0.0592,NDCG@5:0.0331) [8.0 s] *
+INFO:root:Epoch 9     loss=1.1427 [15.7 s]	dev=(HR@5:0.0598,NDCG@5:0.0348) [8.3 s] *
+INFO:root:Epoch 10    loss=1.1915 [15.4 s]	dev=(HR@5:0.0620,NDCG@5:0.0368) [8.3 s] *
+INFO:root:Epoch 11    loss=1.2225 [22.1 s]	dev=(HR@5:0.0632,NDCG@5:0.0379) [9.3 s] *
+INFO:root:Epoch 12    loss=1.2466 [21.8 s]	dev=(HR@5:0.0635,NDCG@5:0.0383) [9.2 s] *
+INFO:root:Epoch 13    loss=1.2658 [22.0 s]	dev=(HR@5:0.0613,NDCG@5:0.0372) [9.5 s]
+INFO:root:Epoch 14    loss=1.2827 [22.2 s]	dev=(HR@5:0.0626,NDCG@5:0.0379) [9.5 s]
+INFO:root:Epoch 15    loss=1.2975 [22.0 s]	dev=(HR@5:0.0610,NDCG@5:0.0371) [9.1 s]
+INFO:root:Epoch 16    loss=1.3111 [21.9 s]	dev=(HR@5:0.0626,NDCG@5:0.0379) [9.3 s]
+INFO:root:Epoch 17    loss=1.3241 [22.0 s]	dev=(HR@5:0.0607,NDCG@5:0.0366) [9.4 s]
+INFO:root:Epoch 18    loss=1.3356 [22.1 s]	dev=(HR@5:0.0607,NDCG@5:0.0369) [9.4 s]
+INFO:root:Epoch 19    loss=1.3471 [21.9 s]	dev=(HR@5:0.0623,NDCG@5:0.0385) [9.1 s] *
+INFO:root:Epoch 20    loss=1.3569 [21.8 s]	dev=(HR@5:0.0607,NDCG@5:0.0371) [9.0 s]
+INFO:root:Epoch 21    loss=1.3669 [21.9 s]	dev=(HR@5:0.0607,NDCG@5:0.0371) [8.9 s]
+INFO:root:Epoch 22    loss=1.3754 [21.7 s]	dev=(HR@5:0.0592,NDCG@5:0.0361) [9.0 s]
+INFO:root:Epoch 23    loss=1.3840 [21.3 s]	dev=(HR@5:0.0598,NDCG@5:0.0371) [9.1 s]
+INFO:root:Epoch 24    loss=1.3918 [21.4 s]	dev=(HR@5:0.0601,NDCG@5:0.0367) [9.1 s]
+INFO:root:Epoch 25    loss=1.3991 [21.8 s]	dev=(HR@5:0.0610,NDCG@5:0.0367) [9.2 s]
+INFO:root:Epoch 26    loss=1.4061 [21.9 s]	dev=(HR@5:0.0592,NDCG@5:0.0364) [9.6 s]
+INFO:root:Epoch 27    loss=1.4127 [21.7 s]	dev=(HR@5:0.0595,NDCG@5:0.0361) [9.3 s]
+INFO:root:Epoch 28    loss=1.4188 [22.0 s]	dev=(HR@5:0.0583,NDCG@5:0.0359) [9.2 s]
+INFO:root:Early stop at 28 based on dev result.
+INFO:root:
+Best Iter(dev)=   19	 dev=(HR@5:0.0623,NDCG@5:0.0385) [794.5 s] 
+INFO:root:Load model from ../model/BUIR/BUIR__MIND_Large__0__lr=0.001__l2=1e-06__emb_size=64__momentum=0.995.pt
+INFO:root:
+Dev  After Training: (HR@5:0.0623,NDCG@5:0.0385,HR@10:0.1163,NDCG@10:0.0556,HR@20:0.2304,NDCG@20:0.0842,HR@50:0.5488,NDCG@50:0.1466)
+INFO:root:
+Test After Training: (HR@5:0.1020,NDCG@5:0.0647,HR@10:0.1716,NDCG@10:0.0872,HR@20:0.2941,NDCG@20:0.1180,HR@50:0.5784,NDCG@50:0.1739)
+INFO:root:Saving top-100 recommendation results to: ../log/BUIR\BUIR__MIND_Large__0__lr=0\rec-BUIR-dev.csv
+INFO:root:dev Prediction results saved!
+INFO:root:Saving top-100 recommendation results to: ../log/BUIR\BUIR__MIND_Large__0__lr=0\rec-BUIR-test.csv
+INFO:root:test Prediction results saved!
+INFO:root:
+--------------------------------------------- END: 2024-12-27 19:02:11 ---------------------------------------------

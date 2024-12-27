@@ -1,0 +1,76 @@
+INFO:root:Namespace(model_name='NeuMF', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2024-12-27 19:04:09 ---------------------------------------------
+INFO:root:
+=================================
+ Arguments          | Values     
+=================================
+ batch_size         | 256       
+ data_appendix      |           
+ dataset            | MIND_Large
+ dropout            | 0         
+ early_stop         | 10        
+ emb_size           | 64        
+ epoch              | 200       
+ eval_batch_size    | 256       
+ gpu                | 0         
+ l2                 | 1e-06     
+ layers             | [64]      
+ lr                 | 0.001     
+ main_metric        |           
+ num_neg            | 1         
+ num_workers        | 5         
+ optimizer          | Adam      
+ random_seed        | 0         
+ save_final_results | 1         
+ test_all           | 0         
+ topk               | 5,10,20,50
+=================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from C:\Users\FOXFOUR\Desktop\GTE_BUIR_NeuMF\data\MIND_Large\BaseReader.pkl
+INFO:root:#params: 2484544
+INFO:root:NeuMF(
+  (mf_u_embeddings): Embedding(16527, 64)
+  (mf_i_embeddings): Embedding(2818, 64)
+  (mlp_u_embeddings): Embedding(16527, 64)
+  (mlp_i_embeddings): Embedding(2818, 64)
+  (mlp): ModuleList(
+    (0): Linear(in_features=128, out_features=64, bias=True)
+  )
+  (dropout_layer): Dropout(p=0, inplace=False)
+  (prediction): Linear(in_features=128, out_features=1, bias=False)
+)
+INFO:root:Test Before Training: (HR@5:0.0755,NDCG@5:0.0436,HR@10:0.1588,NDCG@10:0.0704,HR@20:0.2618,NDCG@20:0.0964,HR@50:0.5441,NDCG@50:0.1518)
+INFO:root:Optimizer: Adam
+INFO:root:Epoch 1     loss=0.4079 [25.7 s]	dev=(HR@5:0.0374,NDCG@5:0.0206) [11.1 s] *
+INFO:root:Epoch 2     loss=0.3588 [25.9 s]	dev=(HR@5:0.0279,NDCG@5:0.0179) [10.9 s]
+INFO:root:Epoch 3     loss=0.3501 [26.7 s]	dev=(HR@5:0.0264,NDCG@5:0.0164) [11.9 s]
+INFO:root:Epoch 4     loss=0.3423 [26.8 s]	dev=(HR@5:0.0451,NDCG@5:0.0252) [11.8 s] *
+INFO:root:Epoch 5     loss=0.3307 [27.1 s]	dev=(HR@5:0.0371,NDCG@5:0.0218) [9.7 s]
+INFO:root:Epoch 6     loss=0.3211 [18.6 s]	dev=(HR@5:0.0454,NDCG@5:0.0261) [9.6 s] *
+INFO:root:Epoch 7     loss=0.3118 [18.3 s]	dev=(HR@5:0.0494,NDCG@5:0.0289) [9.6 s] *
+INFO:root:Epoch 8     loss=0.3029 [18.4 s]	dev=(HR@5:0.0429,NDCG@5:0.0273) [9.6 s]
+INFO:root:Epoch 9     loss=0.2965 [19.0 s]	dev=(HR@5:0.0555,NDCG@5:0.0327) [11.8 s] *
+INFO:root:Epoch 10    loss=0.2912 [26.8 s]	dev=(HR@5:0.0663,NDCG@5:0.0377) [11.8 s] *
+INFO:root:Epoch 11    loss=0.2829 [26.4 s]	dev=(HR@5:0.0586,NDCG@5:0.0346) [11.8 s]
+INFO:root:Epoch 12    loss=0.2776 [26.5 s]	dev=(HR@5:0.0509,NDCG@5:0.0308) [12.1 s]
+INFO:root:Epoch 13    loss=0.2736 [26.9 s]	dev=(HR@5:0.0567,NDCG@5:0.0328) [12.2 s]
+INFO:root:Epoch 14    loss=0.2692 [26.4 s]	dev=(HR@5:0.0580,NDCG@5:0.0329) [12.0 s]
+INFO:root:Epoch 15    loss=0.2680 [28.6 s]	dev=(HR@5:0.0601,NDCG@5:0.0343) [12.0 s]
+INFO:root:Epoch 16    loss=0.2628 [29.1 s]	dev=(HR@5:0.0567,NDCG@5:0.0330) [11.5 s]
+INFO:root:Epoch 17    loss=0.2593 [26.7 s]	dev=(HR@5:0.0607,NDCG@5:0.0358) [11.6 s]
+INFO:root:Epoch 18    loss=0.2552 [27.8 s]	dev=(HR@5:0.0583,NDCG@5:0.0341) [12.1 s]
+INFO:root:Epoch 19    loss=0.2502 [27.0 s]	dev=(HR@5:0.0620,NDCG@5:0.0358) [12.1 s]
+INFO:root:Early stop at 19 based on dev result.
+INFO:root:
+Best Iter(dev)=   10	 dev=(HR@5:0.0663,NDCG@5:0.0377) [693.9 s] 
+INFO:root:Load model from ../model/NeuMF/NeuMF__MIND_Large__0__lr=0.001__l2=1e-06__emb_size=64__layers=[64].pt
+INFO:root:
+Dev  After Training: (HR@5:0.0663,NDCG@5:0.0377,HR@10:0.1304,NDCG@10:0.0582,HR@20:0.2291,NDCG@20:0.0831,HR@50:0.5209,NDCG@50:0.1398)
+INFO:root:
+Test After Training: (HR@5:0.1088,NDCG@5:0.0632,HR@10:0.1765,NDCG@10:0.0850,HR@20:0.2598,NDCG@20:0.1059,HR@50:0.4676,NDCG@50:0.1471)
+INFO:root:Saving top-100 recommendation results to: ../log/NeuMF\NeuMF__MIND_Large__0__lr=0\rec-NeuMF-dev.csv
+INFO:root:dev Prediction results saved!
+INFO:root:Saving top-100 recommendation results to: ../log/NeuMF\NeuMF__MIND_Large__0__lr=0\rec-NeuMF-test.csv
+INFO:root:test Prediction results saved!
+INFO:root:
+--------------------------------------------- END: 2024-12-27 19:16:33 ---------------------------------------------
