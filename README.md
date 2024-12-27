@@ -9,7 +9,8 @@ pip install -r requirements.txt
 ```
 ## 使用方法
 1、要运行GTE_Rechorus，您首先需要Grocery_and_Gourmet_Food和MIND_Large中的数据集，这是Rechorus2.0框架中提供的两个数据集，请按照对应目录里的代码获取并进行预处理  
-2、在命令行中输入如下命令以运行：
+2、我们编写的GTE.py放在src/model/general目录下
+3、进入src目录，在命令行中输入如下命令以运行：
 ```bash
 python main.py --model_name GTE --emb_size 64 --lr 1e-3 --l2 1e-6 --dataset Grocery_and_Gourmet_Food
 python main.py --model_name GTE --emb_size 64 --lr 1e-3 --l2 1e-6 --dataset MIND_Large
